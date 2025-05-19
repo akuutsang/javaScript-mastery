@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: gold;
+}
+
+.main {
+  height: 60vh;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: bisque;
+  margin-bottom: 20px;
+}
+
+.top {
+  height: 90vh;
+  display: grid;
+  /* grid-template: repeat(6, 1fr) / repeat(6, 1fr); */
+  grid-template: repeat(6, minmax(50px, 1fr)) / repeat(6, minmax(50px, 1fr));
+  grid-area: "number number null null string string"
+    "bigint bigint nan nan boolean boolean"
+    "undefined undefined obj-sym obj-sym typeof typeof";
+  gap: 10px 15px;
+}
+
+#number {
+  grid-area: 1/1/3/4;
+  background-color: turquoise;
+}
+#null {
+  grid-area: 3/4/5/7;
+  background-color: midnightblue;
+}
+#string {
+  grid-area: 5/1/7/4;
+  background-color: darkorchid;
+}
+#bigint {
+  grid-area: 1/4/3/7;
+  background-color: gold;
+}
+#nan {
+  grid-area: 3/1/5/4;
+  background-color: fuchsia;
+}
+#boolean {
+  grid-area: 5/4/7/7;
+  background-color: darkgreen;
+}
+#undefined {
+  grid-area: 1/1/3/4;
+  background-color: crimson;
+}
+#obj-sym {
+  grid-area: 3/4/5/7;
+  background-color: blue;
+}
+#typeof {
+  grid-area: 5/1/7/4;
+  background-color: chartreuse;
+}
