@@ -8,15 +8,40 @@
 //   console.log("Please try another place!!!!!!!!");
 // }
 
+// let user = {
+//   name: "Limama",
+//   age: 2,
+//   birthday: "29th July 2023",
+// };
+
+// let currentUser = user["name"];
+// let birthyear = "birthday";
+
+// user.occupation = "stay at home baby";
+// let stat = user["occupation"];
+
+// console.log(user);
+// console.log(user[birthyear]);
+// console.log(user.birthyear);
+
+// console.log(stat);
+
+let mainUser = {
+  userName: "Limaro",
+  birthYear: "2023",
+  currentYear: "2025",
+  getAge: function () {
+    return this.currentYear - this.birthYear;
+  },
+};
+console.log(mainUser.getAge());
+
 let user = {
-  name: "Limama",
-  age: 2,
-  birthday: "29th July 2023",
+  userName: "Limaro",
+  birthYear: 2023,
+  currentYear: 2025,
 };
 
-let currentUser = user["name"];
-let birthyear = "birthday";
+user["age"] = user["currentYear"] - user["birthYear"];
 
-console.log(user);
-console.log(user[birthyear]);
-console.log(user.birthyear);
+console.log(user["age"]);
