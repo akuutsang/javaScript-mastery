@@ -45,3 +45,7 @@ let user = {
 user["age"] = user["currentYear"] - user["birthYear"];
 
 console.log(user["age"]);
+
+for (let prop in user) {
+  console.log(user[prop]);
+}
