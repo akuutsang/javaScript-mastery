@@ -45,3 +45,20 @@ const books = [
 books.forEach((book) => {
   console.log(book.info());
 });
+
+//OBJECT CONTRUCTORS; old school method
+
+function OldBook(title, author, pages, isRead) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.isRead = isRead;
+}
+
+OldBook.prototype.info = function () {
+  const readStatus = this.isRead ? "already read" : "not read yet";
+  return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
+};
+
+const classic = new OldBook("Dracula", "Bram Stoker", 418, false);
+console.log(classic.info());
