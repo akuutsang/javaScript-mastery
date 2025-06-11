@@ -35,4 +35,13 @@ class Book2 {
 const theHobbit2 = new Book2("The Hobbit", "J.R.R. Tolkien", 295, false);
 
 console.log(theHobbit2.info());
-// Output: "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
+
+const books = [
+  new Book("1984", "George Orwell", 328, true),
+  new Book("Dune", "Frank Herbert", 412, false),
+  new Book("The Hobbit", "J.R.R. Tolkien", 295, true),
+];
+
+books.forEach((book) => {
+  console.log(book.info());
+});
